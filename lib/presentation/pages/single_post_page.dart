@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../viewmodels/post_viewmodel.dart';
-import '../pages/posts_page.dart'; // Импорт страницы с пагинацией
+import '../pages/posts_page.dart';
 
 class SinglePostPage extends StatelessWidget {
   @override
