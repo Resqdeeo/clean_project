@@ -46,7 +46,7 @@ class SinglePostPage extends StatelessWidget {
             ],
           ),
         )
-            : Text("No Data"),
+            : Text("No Data"), // If no data
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => viewModel.fetchPost(),
