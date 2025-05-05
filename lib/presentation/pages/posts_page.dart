@@ -14,16 +14,15 @@ class PostsPage extends StatelessWidget {
             return Center(child: CircularProgressIndicator());
           }
 
-          // Создаем ListView с динамическим числом элементов
           return ListView.builder(
-            itemCount: viewModel.posts.length + 1, // +1 для индикатора загрузки
+            itemCount: viewModel.posts.length + 1, 
             itemBuilder: (context, index) {
               // Когда достигаем последнего элемента, загружаем новые посты
               if (index == viewModel.posts.length) {
                 if (!viewModel.isEndReached) {
                   // Если данные не закончились, подгружаем новые
                   viewModel.loadPosts();
-                  return Center(child: CircularProgressIndicator()); // Индикатор загрузки
+                  return Center(child: CircularProgressIndicator()); 
                 }
                 return SizedBox.shrink(); // Если достигнут конец — ничего не показываем
               }
