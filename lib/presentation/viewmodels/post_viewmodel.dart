@@ -33,7 +33,7 @@ class PostViewModel extends ChangeNotifier {
 
   Future<void> loadPosts() async {
     if (isLoading || isEndReached) {
-      // Если данные загружаются или конец списка, не запускаем новую загрузку
+      // Если данные загружаются или конец списка, не запускаем новую загрузку (чисто для проверки)
       print('Пагинация остановлена: isLoading = $isLoading, isEndReached = $isEndReached');
       return;
     }
@@ -42,7 +42,7 @@ class PostViewModel extends ChangeNotifier {
     notifyListeners();
 
     try {
-      // Загружаем посты для текущей страницы
+      // Посты для текущей страницы (для себя написал, чтоб видеть, что происходит)
       final newPosts = await getPostsUseCase(currentPage);
       print('Загружены новые посты: $newPosts');
 
